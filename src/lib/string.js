@@ -1,11 +1,10 @@
 export function commaSeparatedToArray(text) {
-  const array = text
+  const textArray = text
     .split(',')
     .map(item => item.trim())
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
     .sort()
-  const uniqueSet = new Set(array)
-  const uniqueArray = [...uniqueSet]
-  return uniqueArray
+  const uniqueTextSet = new Set(textArray)
+  const uniqueTextArray = [...uniqueTextSet]
+  return uniqueTextArray
 }
-
-// return string.charAt(0).toUpperCase() + string.slice(1);
